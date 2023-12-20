@@ -20,13 +20,13 @@ const handleRejected = (state, action) => {
     },
 
 
-
+    reducers: {},
   extraReducers: builder => {
     builder
 
     .addCase(fetchContacts.pending, handlePending)
     .addCase(fetchContacts.fulfilled, (state, action)  => {
-      state.isLoading = true;
+      state.isLoading = false;
       state.error = null;
       state.items = action.payload;
     })
@@ -63,4 +63,6 @@ const handleRejected = (state, action) => {
 
 
 export const contactsReducer = contactsSlice.reducer;
+
+
 
