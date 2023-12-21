@@ -5,6 +5,7 @@ import { fetchContacts } from "reduxFile/contacts/operations";
 import { selectContacts } from "reduxFile/contacts/selectors";
 import { ListContacts } from "components/ListContact/ListContact";
 import { FormContacts } from "components/FormContact/FormContact";
+import { ContainerDivPhonebook, Message, TitleContacts, TitlePhonebook } from "components/FormContact/FormContacts.styled";
 
 
 const ContactsPage = () => {
@@ -20,16 +21,15 @@ const ContactsPage = () => {
         
         
           
-            <div>
+            <ContainerDivPhonebook>
         
-                <h2>Phonebook</h2>
+                <TitlePhonebook>Phonebook</TitlePhonebook>
                 <FormContacts />
-                <h2>Contacts</h2>
+                <TitleContacts>Contacts</TitleContacts>
                 <Filter />
-                {contacts.length > 0 ? <ListContacts /> : <b>you have not added contacts</b>}
-                <ListContacts />
-        
-            </div>
+                {contacts.length > 0 ? <ListContacts /> : <Message> You have not added any contacts</Message>}
+               
+            </ContainerDivPhonebook>
     
     )
 };

@@ -6,5 +6,7 @@ export const AppBarHeader = styled.header`
     justify-content: space-between;
     align-items: center;
     margin-bottom: 16px;
-    border-bottom: 1px solid #2a363b;
+    border: 2px solid #A3E4D7;
+   border-radius: 10px;
+   min-height: 50px;
     `

@@ -1,12 +1,13 @@
+import { TitleHomePhone } from "components/UserMenu/UserMenu.styled";
 
 
   
   export default function Homepage() {
     return (
       
-        <h1>
+        <TitleHomePhone>
           Phonebook
-        </h1>
+        </TitleHomePhone>
      
     );
   }

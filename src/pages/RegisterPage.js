@@ -1,13 +1,13 @@
 
  
-
 import { RegisterForm } from 'components/RegisterForm/RegisterForm';
+import { DivRegisterForm } from 'components/RegisterForm/RegisterForm.styled';
 
 export default function RegisterPage() {
   return (
-    <div>
+    <DivRegisterForm>
       <RegisterForm />
-    </div>
+    </DivRegisterForm>
   );
 }
 
