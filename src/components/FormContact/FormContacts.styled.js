@@ -116,6 +116,7 @@ transition: background-color 350ms cubic-bezier(0.4, 0, 0.2, 1);
 `
 export const  ItemContact = styled.li`
 font-family: 'roboto';
+margin-top: 8px;
 `
 export const  Message = styled.p`
 font-family: 'roboto';
