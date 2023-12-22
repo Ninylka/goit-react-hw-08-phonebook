@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { useAuth } from "hooks";
 import { RestrictedRoute } from "components/RestrictedRoute/RestrictedRoute";
 import { PrivateRoute } from "components/PrivateRoute/PrivateRoute";
+import { Loader } from "components/Loader/Loader";
 
 
 
@@ -14,7 +15,7 @@ const RegisterPage = lazy(()=> import ("pages/RegisterPage"));
 const LoginPage = lazy(()=> import ("pages/LoginPage"));
 const ContactsPage = lazy(()=> import ("pages/ContactsPage"));
 
-const App = () => {
+ const App = () => {
   const dispatch = useDispatch();
   const { isRefreshing } = useAuth();
 
@@ -24,8 +25,8 @@ const App = () => {
 
   
     return isRefreshing ? (
-      <b>Refreshing user...</b>
-      ): (<div>
+     <Loader/>
+      ):(
        <Routes>
   <Route path="/" element={<AppLayout />}>
      <Route index element={<HomePage />} />
@@ -50,7 +51,7 @@ const App = () => {
         </Route> 
   <Route path="*" element={<Navigate to="/" />} />
        </Routes>
-      </div>
+    
     );
   };
 
@@ -63,9 +64,7 @@ const App = () => {
 
 
   
-
-
-
+  
 
 
 

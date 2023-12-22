@@ -3,15 +3,12 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { ButtonDelete, ItemContact } from '../FormContact/FormContacts.styled'
 import { deleteContact } from 'reduxFile/contacts/operations';
+import { selectVisibleContacts } from 'reduxFile/contacts/selectors';
 
 export const ListContacts = () => {
 const dispatch = useDispatch();
-const contacts = useSelector((state) => state.contacts.items)
 
-const filterValue = useSelector((state) => state.filter.value);
-const filteredContacts = contacts.filter((contact) =>
-contact.name.toLowerCase().includes(filterValue.toLowerCase())
-);
+const filteredContacts = useSelector(selectVisibleContacts);
 
 const handleDelete = (contactId) => {
 
@@ -32,3 +29,5 @@ const handleDelete = (contactId) => {
     </ul>
   );
 };
+
+

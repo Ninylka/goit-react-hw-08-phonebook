@@ -9,7 +9,7 @@ export const RegisterForm = () => {
   const handleSubmit = e => {
     e.preventDefault();
     const form = e.currentTarget;
-    dispatch(
+   dispatch(
       register({
         name: form.elements.name.value,
         email: form.elements.email.value,
@@ -17,7 +17,7 @@ export const RegisterForm = () => {
       })
     );
     form.reset();
-  };
+  }
 
   return (
     <DivRegisterForm>

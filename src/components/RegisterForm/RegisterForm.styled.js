@@ -6,7 +6,7 @@ justify-content: center;
 flex-direction: column;
 margin: auto;
 `
-export const FormRegisterStyled = styled.div`
+export const FormRegisterStyled = styled.form`
 width: 300px;
 height: 350px;
 border: 2px solid #A3E4D7;
