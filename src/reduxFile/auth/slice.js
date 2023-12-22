@@ -50,8 +50,6 @@ const initialState = {
   }
 });
 
-
-
 export const authReducer = authSlice.reducer;
 
 
